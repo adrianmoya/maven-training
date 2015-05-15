@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<!-- Your own application should inherit from spring-boot-starter-parent -->
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.0.2.RELEASE</version>
-	</parent>
+	<modelVersion>4.0.0</modelVersion>	
 	<artifactId>maven-training</artifactId>
 	<groupId>net.velocitypartners</groupId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Spring Boot Web JSP Sample</name>
 	<description>Spring Boot Web JSP Sample</description>
 	<version>1.1-SNAPSHOT</version>
@@ -22,31 +16,7 @@
 		<main.basedir>${basedir}/../..</main.basedir>
 		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -73,4 +43,36 @@
 		<developerConnection>scm:git:git@github.com:adrianmoya/maven-training.git</developerConnection>
   	  <tag>HEAD</tag>
   </scm>
+
+<repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>libs-release</name>
+          <url>http://192.168.60.249/artifactory/libs-release</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshot</name>
+          <url>http://192.168.60.249/artifactory/libs-snapshot</url>
+        </repository>
+      </repositories>
+
+<distributionManagement>
+    <repository>
+        <id>artifactory-releases</id>
+        <name>libs-release-local</name>
+        <url>http://192.168.60.249/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>artifactory-snapshots</id>
+        <name>libs-snapshot-local</name>
+        <url>http://192.168.60.249/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
+
 </project>
