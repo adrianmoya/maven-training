@@ -22,7 +22,7 @@
 	<properties>
 		<main.basedir>${basedir}/../..</main.basedir>
 		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
-		<skip.surefire.tests>${skipUTs}</skip.surefire.tests>
+		<skipUTs>${skipTests}</skipUTs>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -60,7 +60,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
-					<skipTests>${skip.surefire.tests}</skipTests>
+					<skipTests>${skipUTs}</skipTests>
 				</configuration>
 			</plugin>
 			<plugin>
