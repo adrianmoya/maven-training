@@ -13,6 +13,8 @@
 	JSTL URL: ${url}
 	<br>
 	Message: ${message}
+	<br>
+	Greeting: ${greeting}
 </body>
 
 </html>

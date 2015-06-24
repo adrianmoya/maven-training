@@ -41,7 +41,7 @@ import static org.junit.Assert.assertTrue;
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
 @DirtiesContext
-public class SampleWebJspApplicationTests {
+public class SampleWebJspApplicationIT {
 
 	@Value("${local.server.port}")
 	private int port;
