@@ -14,6 +14,6 @@ public class GreetingDelegate {
 	 * @return the greeting message 
 	 */
 	public String getGreeting(){
-		return "Welcome to the Jenkins Training";
+		return "Welcome to the Jenkins Training 2";
 	}
 }
