@@ -89,7 +89,6 @@
 						is passed as VM argument when Maven the Surefire plugin is executed. -->
 					<execution>
 						<id>pre-unit-test</id>
-						<phase>pre-unit-test</phase>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
